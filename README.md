@@ -10,15 +10,15 @@ Essa API foi desenvolvida para o Hackathon do Tech Academy.
 
 ## 📝 Métodos implementados
 
-- [x] **GET**: Endpoint para pegar a lista de Frutas, Verduras, Legumes e Hortaliças (coleção).
+- [x] **getAllfoods**: Endpoint para pegar a lista de Frutas, Verduras, Legumes e Hortaliças (coleção).
 
-- [x] **GET by ID**: Endpoint para pegar uma Fruta, Verdura, Legume e/ou Hortaliça (com base em um parâmetro de rota).
+- [x] **getFood**: Endpoint para pegar uma Fruta, Verdura, Legume e/ou Hortaliça (com base em um parâmetro de rota).
 
-- [x] **POST**: Endpoint para criar uma Fruta, Verdura, Legume e/ou Hortaliça.
+- [x] **createFood**: Endpoint para criar uma Fruta, Verdura, Legume e/ou Hortaliça.
 
-- [x] **PUT**: Endpoint para alterar uma Fruta, Verdura, Legume e/ou Hortaliça (com base em um parâmetro de rota).
+- [x] **updateFood**: Endpoint para alterar uma Fruta, Verdura, Legume e/ou Hortaliça (com base em um parâmetro de rota).
 
-- [x] **DELETE**: Endpoint para deletar uma Fruta, Verdura, Legume e/ou Hortaliça (com base em um parâmetro de rota).
+- [x] **deleteFood**: Endpoint para deletar uma Fruta, Verdura, Legume e/ou Hortaliça (com base em um parâmetro de rota).
 
 
 ## 🔖 Frontend
