@@ -6,7 +6,7 @@ import { StatusCodes } from 'http-status-codes'
 const app = express()
 const PORT = process.env.PORT || 3000
 
-var dir = path.join('public')
+let dir = path.join('public')
 
 app.use(express.static(dir))
 
@@ -96,7 +96,7 @@ app.get('/', (request, response) => {
 })
 
 app.get('/foods', (request, response) => {
-  return response.send(foods)
+  return response.json(foods)
 })
 
 app.get('/foods/:foodId', (request, response) => {
@@ -104,17 +104,27 @@ app.get('/foods/:foodId', (request, response) => {
   const food = foods.find(food => {
     return food.id === Number(foodId)
   })
-  return response.send(food)
+  return response.json(food)
 })
 
 app.post('/foods', (request, response) => {
-  const newFood = request.body
-  foods.push(newFood)
-  return response.status(StatusCodes.CREATED).send(newFood)
+  const { body } = request
+  if(!body) {
+    return response.status(StatusCodes.BAD_REQUEST).json({ message: 'Invalid body' })
+  }
+  foods.push(body)
+  return response.status(StatusCodes.CREATED).json(body)
 })
 
 app.put('/foods/:foodId', (request, response) => {
-  const foodId = request.params.foodId
+  const { params } = request
+  if(!params || !params.foodId){
+    return response.status(StatusCodes.BAD_REQUEST).json({ message: 'Invalid params! FoodId must be valid' })
+  }
+  const { foodId } = params
+  if(!request.body) {
+    return response.status(StatusCodes.BAD_REQUEST).json({ message: 'Invalid body' })
+  }
   const updatedFood = request.body
 
   foods = foods.map(food => {
