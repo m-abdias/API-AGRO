@@ -25,5 +25,5 @@ Essa API foi desenvolvida para o Hackathon do Tech Academy.
 - O repositório de código do front está no link:
 https://github.com/m-abdias/calculator
 
-## 🔗 Deploy APY
+## 🔗 Deploy API
 https://api-foods-hackathon.herokuapp.com/foods
