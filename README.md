@@ -47,9 +47,17 @@ Essa API foi desenvolvida para o Hackathon do Tech Academy.
 - [x] **deleteInventory**: Endpoint para deletar um lote de produto (com base em um parâmetro de rota).
 
 
+## 🚀 Tecnologias
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+- Node
+- Api disponibilizada no Heroku
+- Banco de Dados PostgreSQL
+
+
 ## 🔖 Frontend
 - O repositório de código do front está no link:
 https://github.com/m-abdias/calculator
+
 
 ## 🔗 Deploy API
 https://api-foods-hackathon.herokuapp.com/foods
